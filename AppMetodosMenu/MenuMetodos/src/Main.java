@@ -12,9 +12,10 @@ public class Main {
         do
         {
             System.out.println("MENU");
-            System.out.println("1.Ordenamiento por seleccion");
+            System.out.println("1.Ordenamiento por Seleccion");
             System.out.println("2.Ordenamineto por Inserccion");
-            System.out.println("3.Salir");
+            System.out.println("3.Ordenamiento por Burbuja");
+            System.out.println("4.Salir");
             System.out.println("Ingrese una opcion: ");
             opcion = scanner.nextInt();
 
@@ -30,15 +31,20 @@ public class Main {
                     metodos.imprimirArreglo(numeros);  
                     break;
                 case 3:
+                    metodos.metodoBurbuja(numeros ,false);
+                    System.out.println("Ordenamiento por Burbuja: ");
+                    metodos.imprimirArreglo(numeros);
+                    break;    
+                case 4:
                     System.out.println("Saliendo del programa....");
-                    break;     
-            
+                    break; 
+
                 default:
                     System.out.println("Opcion Incorrecta. Ingrese nuevamente: ");
                 
             }
             
-        }while(opcion !=3);
+        }while(opcion !=4);
 
         scanner.close();
     }
